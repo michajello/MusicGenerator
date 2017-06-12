@@ -43,3 +43,5 @@ matplotlib 2.0.0
                         Image to convert into music
 
 
+Example:
+main.py -f outfile.midi -l 60 -s 120 -i [picture_to_translate.jpg]
