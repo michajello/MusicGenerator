@@ -15,8 +15,9 @@ Program ten powinien wykorzystywać następujące elementy:
 Tresc zadania w Google Drive: https://goo.gl/dbfwo3
 
 Termin oddania zadania: 3 kwietnia 2017, 20:00
+**Music Generator** can generate random music or 'translate' picture into music:
 
-#Requirements:
+## Requirements:
 Python 3.6
 python3-tk
 
@@ -25,14 +26,27 @@ miditime 1.1.3
 pillow 3.1.2
 matplotlib 2.0.0
 
-**Music Generator** can generate random music or 'translate' pictures into music:
-    usage: main.py [-h] [-f FILENAME] [-l LENGTH] [-s SPEED] [-r {1,2,3,4,5,6}]
-        or
-    main.py [-h] [-f FILENAME] [-l LENGTH] [-s SPEED]  [-i IMAGE]
-    
+
+## Usage:
+```shell
+main.py [-h] [-f FILENAME] [-l LENGTH] [-s SPEED] [-r {1,2,3,4,5,6}]
+```
+or
+```shell
+main.py [-h] [-f FILENAME] [-l LENGTH] [-s SPEED]  [-i IMAGE]
+```
+
+***Example:***
+
+```shell
+main.py -f outfile.midi -l 60 -s 120 -i [picture_to_translate.jpg]
+```
+
+### Usage manual
+```console
   -h, --help            show this help message and exit
   -f FILENAME, --filename FILENAME
-                        Name of output file
+                        Name of output file (if not exists, then will be created)
   -l LENGTH, --length LENGTH
                         Length of song in seconds
   -s SPEED, --speed SPEED
@@ -41,7 +55,3 @@ matplotlib 2.0.0
                         Narkotic rate; allowed values:[1,2,3,4,5,6]
   -i IMAGE, --image IMAGE
                         Image to convert into music
-
-
-Example:
-main.py -f outfile.midi -l 60 -s 120 -i [picture_to_translate.jpg]
